@@ -1,6 +1,6 @@
 package semaforo.Light;
 
-public class SimpleLigth implements Light {
+public class AbstractLight implements Light {
 
 	private OnOff state = OnOff.OFF;
 	
