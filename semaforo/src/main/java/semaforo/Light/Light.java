@@ -1,13 +1,7 @@
 package semaforo.Light;
 
-public interface Light {
+import semaforo.util.TurnOnOff;
 
-enum OnOff {ON, OFF}
-
-void turnOn();
-void turnOff();
-
-boolean isOn();
-boolean isOff();
+public interface Light extends TurnOnOff{
 
 }
