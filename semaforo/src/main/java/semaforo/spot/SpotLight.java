@@ -13,7 +13,7 @@ public class SpotLight implements TurnOnOff{
 	private Point position = new Point(0,0);
 	private Dimension dimension = new Dimension(20,20);
 	
-	private Light light;
+	private AbstractLightE27  light;
 	private Image mask;
 	
 	public SpotLight(Image mask) {
@@ -42,7 +42,7 @@ public class SpotLight implements TurnOnOff{
 	}
 	
 	public void setLight(AbstractLightE27 light) {
-		this.light = (Light) light;
+		this.light = light;
 	}
 	
 	@Override
@@ -57,14 +57,12 @@ public class SpotLight implements TurnOnOff{
 
 	@Override
 	public boolean isOn() {
-		// TODO Auto-generated method stub
-		return false;
+		return this.light != null && this.light.isOn();
 	}
 
 	@Override
 	public boolean isOff() {
-		// TODO Auto-generated method stub
-		return false;
+		return this.light != null && this.light.isOff();
 	}
 
 }
