@@ -1,0 +1,11 @@
+RELATORIO 1:
+
+a) Agregação e Composição
+Agregação e composição são dois tipos de associação entre classes em Programação Orientada a Objetos, representando relações "todo-parte".
+Agregação é uma relação mais fraca, onde um objeto pode existir independentemente do outro. Por exemplo, uma Turma pode ter vários Alunos, mas um Aluno ainda existe fora da Turma. Composição é uma relação mais forte um objeto faz parte de outro de forma inseparável. Se o objeto "todo" for destruído, suas partes também deixam de existir.
+
+b)Diagramação UML
+UML é uma linguagem padrão usada para representar visualmente projetos de software orientado a objetos. Podem ser criados Diagramas de Classes, que mostram as classes, seus atributos, métodos e os relacionamentos entre elas (como herança, associação, agregação e composição). Cada classe é representada como um retângulo dividido em três partes: nome da classe, atributos e métodos. As relações são desenhadas com linhas e símbolos específicos (por exemplo, setas para herança, losangos para agregação/composição), o que facilita a comunicação do projeto para toda a equipe.
+
+e)Teste Unitário
+Teste unitário é uma técnica de verificação onde testamos pequenas partes individuais do código, geralmente métodos ou classes, para garantir que funcionam como esperado. Em sala, usamos a biblioteca JUnit para automatizar esses testes. Cada teste é independente e simula cenários específicos, comparando o resultado obtido com o resultado esperado. Testes unitários ajudam a detectar erros cedo no desenvolvimento e facilitam a manutenção do código no futuro.
