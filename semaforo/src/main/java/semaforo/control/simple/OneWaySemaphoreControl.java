@@ -87,50 +87,47 @@ public class OneWaySemaphoreControl implements SemaphoreControl {
 	
 	@Override
 	public void turnOn() {
-		// TODO Auto-generated method stub
-		
+		if (state == OnOff.ON) return;
+	    state = OnOff.ON;
+	    run();
 	}
 
 	@Override
 	public void turnOff() {
-		// TODO Auto-generated method stub
-		
+	    state = OnOff.OFF;
+	    
+	    trafficLights.forEach(e->e.turnAlert());
 	}
 
 	@Override
 	public boolean isOn() {
-		// TODO Auto-generated method stub
-		return false;
+	    return state == OnOff.ON;
 	}
 
 	@Override
 	public boolean isOff() {
-		// TODO Auto-generated method stub
-		return false;
+	    return state == OnOff.OFF;
 	}
 
 	@Override
 	public void setGreenSeconds(int seconds) {
-		// TODO Auto-generated method stub
-		
+	    this.greenMillis = seconds * 1000;
 	}
 
 	@Override
 	public void setYellowSeconds(int seconds) {
-		// TODO Auto-generated method stub
-		
+		this.yellowMillis = seconds * 1000;	
 	}
 
 	@Override
 	public void setRedSeconds(int seconds) {
-		// TODO Auto-generated method stub
-		
+	    this.redMillis = seconds * 1000;
 	}
 
 	@Override
 	public void setAlertPeriod(LocalTime start, LocalTime end) {
-		// TODO Auto-generated method stub
-		
+	    this.alertStart = start;
+	    this.alertEnd = end;
 	}
 
 }
