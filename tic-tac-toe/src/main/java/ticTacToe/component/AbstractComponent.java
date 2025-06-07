@@ -68,12 +68,17 @@ public abstract class AbstractComponent implements Paintable{
         return new MouseMotionAdapter() {
             @Override
             public void mouseMoved(MouseEvent me) {
-                boolean dentro = isOver(me.getPoint());
-                if (mouseOver != dentro) {
-                    mouseOver = dentro;
+                boolean inside = isOver(me.getPoint());
+                if (mouseOver != inside) {
+                    mouseOver = inside;
                     me.getComponent().repaint(); 
                 }
             }
         };
     }
+	
+	//--Polymorphic Methods------------------------------------
+	protected void onMouseClick(MouseEvent me) {
+	//the standard behavior is to do nothing
+	}
 }
