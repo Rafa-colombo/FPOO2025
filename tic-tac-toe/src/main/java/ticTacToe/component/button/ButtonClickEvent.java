@@ -7,10 +7,9 @@ public final class ButtonClickEvent {
 	public final Button source;
 	public final MouseButton mouseButton;
 	
-	public ButtonClickEvent (Button source, MouseButton mouseButton) {
+	public ButtonClickEvent(Button source, MouseButton mouseButton ) {
 		
 		this.source = source;
-		this.mouseButton = mouseButton;
+		this.mouseButton = mouseButton;		
 	}
-
 }
